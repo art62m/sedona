@@ -1,0 +1,389 @@
+body {
+	margin: 0;
+	padding: 0;
+	min-width: 1200px;
+	font-family: 'PT Sans', "Arial", sans-serif;
+	font-size: 14px;
+	line-height: 26px;
+	color: #333333;
+	text-transform: uppercase;
+}
+
+.container {
+	position: relative;
+	width: 1200px;
+	margin: 0 auto;
+	box-shadow: 0 0 15px 5px rgba(0,1,1,0.2);
+}
+
+.clearfix {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.main-header {
+	position: relative;		
+}
+
+.header-logo {
+	position: absolute;
+	left: 50%;
+	margin-left: -69px;
+	top: 0;
+	z-index: 1000;
+}
+
+.main-menu-list {
+	background-color: white;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 0;
+	padding: 15px 72px;
+}
+
+.main-menu-list li {
+	display: inline-block;
+	vertical-align: bottom;
+	width: 128px;		
+}
+
+.main-menu-list a {	
+	font-family: 'PT Sans', "Arial", sans-serif;
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: bold;
+	vertical-align: middle;
+	color: #000000;
+	text-decoration: none;	
+}
+
+.main-menu-list li:nth-child(1) {	
+	margin-right: 112px;
+}
+
+.main-menu-list li:nth-child(2) {
+	margin-right: 320px;
+}
+
+.main-menu-list li:nth-child(3) {
+	text-align: right;
+	margin-right: 112px;
+}
+.main-menu-list li:nth-child(4) {
+	text-align: right;
+	margin-right: 0px;
+}
+
+.intro-block {
+	position: relative;
+	height: 508px;
+}
+
+.intro-block-image {
+	position: absolute;
+	top: -56px;
+	z-index: -1;
+	background: url("img/intro-image.jpg") no-repeat;
+	width: 1200px;
+	height: 773px;
+}
+
+.intro-block-image-shape {
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+}
+
+.description {
+	background-color:  #ffffff;
+	font-size: 0;
+}
+
+.description-text {
+	padding: 0 312px;
+	padding-top: 59px;
+	text-align: center;
+	padding-bottom: 52px;
+}
+
+.description-text p {
+	margin: 0;
+	padding: 0;	
+	font-size: 14px;
+}
+
+.intro-text-title {
+	margin-bottom: 55px;
+}
+
+.intro-text-title {
+	margin: 0;
+	padding: 0;
+	font-size: 21px;
+	line-height: 26px;	
+	color: #000000;
+	font-weight: bold;
+	margin-bottom: 27px;
+}
+
+.feauters {
+	width: 1200px;
+	font-size: 0;
+}
+
+.feauters-item {
+	display: inline-block;
+	text-align: center;
+	width: 400px;
+	font-size: 14px;
+	line-height: 21px;
+	padding-top: 61px;
+	padding-bottom: 82px;
+}
+
+.feauters-item-title {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	padding-top: 99px;
+	font-size: 21px;
+	color: #000000;
+	margin-bottom: 25px;
+}
+
+.feauters-item-title::before {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -37px;
+	content: "";
+	width: 75px;
+	height: 75px;
+	background: transparent url("img/house-icon.png") no-repeat;
+}
+
+.feauters-item:nth-child(2) .feauters-item-title::before {
+	background: transparent url("img/burger-icon.png") no-repeat;
+}
+
+.feauters-item:nth-child(3) .feauters-item-title::before {
+	background: transparent url("img/box-icon.png") no-repeat;
+}
+
+.feauters-item-text {
+	margin: 0;
+	padding: 0;
+	padding: 0 50px;
+}
+
+.description-item {
+	width: 1200px;	
+	font-size: 14px;
+	line-height: 21px;
+}
+
+.description-item-text {
+	float: left;
+	width: 400px;
+	text-align: center;
+	background-color: #81b3d2; 
+	color: #ffffff;
+	line-height: 21px;
+	padding-top: 54px;
+	padding-bottom: 53px;
+}
+
+.description-item-text-title {
+	margin: 0;
+	font-size: 21px;
+	padding-left: 124px;
+	padding-right: 124px;
+	margin-bottom: 24px;
+}
+
+.description-item-text p {
+	margin: 0;
+	padding-left: 45px;
+	padding-right: 45px;	
+	margin-top: 20px;
+}
+
+.description-item-image {
+	float: right;
+	width: 800px;
+	height: 256px;
+}
+
+
+
+
+.description-item:nth-child(4) .description-item-text{
+	float: right;
+}
+
+.description-item:nth-child(4) .description-item-image{
+	float: left;
+}
+
+
+
+.description-item:nth-child(5),
+.description-item:nth-child(6),
+.description-item:nth-child(7) {
+	display: inline-block;	
+	width: 400px;
+
+}
+
+.description-item:nth-child(5) .description-item-text,
+.description-item:nth-child(6) .description-item-text,
+.description-item:nth-child(7) .description-item-text {
+	float: none;
+	color: #000000;
+	background-color: #eeeeee;
+	padding-top: 48px;
+	padding-bottom: 59px;
+}
+
+.interest-block-item {
+	padding: 0 316px;
+	padding-top: 55px;
+	text-align: center;
+}
+
+.interest-block-item-title {
+	margin: 0;
+	font-size: 30px;
+	color: #000000;
+	margin-bottom: 29px;
+}
+
+.interest-block-item-text {
+	margin: 0;
+	line-height: 24px;
+	margin-bottom: 47px;
+}
+
+.find-button {
+	display: block;
+	padding: 30px 132px;
+	margin: 0;
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #ffffff;
+	background-color: #766357;
+}
+
+.main-footer {
+	position: relative;	
+}
+
+.map {
+	position: relative;	
+}
+
+.main-form {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -285px;
+	width: 460px;
+	padding: 55px 55px;
+	background-color: #ffffff;
+}
+
+.main-form label {
+	font-weight: bold;
+}
+
+.main-form input[type="text"] {
+	border: 0;
+	background-color: #f2f2f2;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	background-color: rgba(255,255,255,0.9);
+	padding: 0 72px;
+}
+
+.tag-item {
+	float: left;
+	margin-right: 88px;
+	padding-left: 60px;
+	padding-right: 44px;
+	padding-bottom: 50px;
+	padding-top: 49px;
+}
+
+.tag-item a {
+	font-size: 21px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #000000;
+}
+
+.footer-socials {
+	float: left;
+	width: 400px;
+	text-align: center;
+	padding: 36px 0;
+	margin-right: 87px;
+}
+
+.social-btn {	
+	display: inline-block;
+	width: 46px;
+	height: 48px;
+	font-size: 0;
+	background-color: #81b3d2;
+}
+
+.social-btn-tw {
+	background: #81b3d2 url("img/tw.png") no-repeat 50% 50%;
+}
+
+.social-btn-fb {
+	background: #81b3d2 url("img/fb.png") no-repeat 50% 50%;
+}
+
+.social-btn-yt {
+	background: #81b3d2 url("img/yt.png") no-repeat 50% 50%;
+}
+
+.footer-copyright {
+	float: right;
+	width: 195px;
+	padding-left: 15px;
+	padding-right: 31px;
+	padding-bottom: 40px;
+	padding-top: 41px;
+	vertical-align: middle;
+}
+
+.footer-copyright a {
+	position: relative;
+	display: inline-block;
+	margin: 0;
+	padding-right: 121px;
+	text-decoration: none;
+	line-height: 39px;
+	color: #000000;
+	height: 39px;
+}
+
+
+.footer-copyright a:after {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 113px;
+	height: 39px;
+	background: transparent url("img/htmlacademy.png") no-repeat;
+}
