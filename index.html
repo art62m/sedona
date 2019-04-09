@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Sedona</title>
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 	<div class="container">
@@ -135,10 +135,14 @@
 			</div>
 			<div class="map">
 				<form class="main-form" action="#" method="post">
-					<label class="arrival" for="arrival-date">Дата заезда:</label>
-					<input type="text" id="arrival-date">
-					<label class="departure" for="departure-date">Дата выезда:</label>
-					<input type="text" id="departure-date">
+					<label class="arrival" for="arrival-date">Дата заезда:
+						<input type="text" id="arrival-date">
+						<a class="calendar" href="#"></a>	
+					</label>
+					<label class="departure" for="departure-date">Дата выезда:
+						<input type="text" id="departure-date">
+						<a class="calendar" href="#"></a>	
+					</label>
 					<div class="count">
 						<label for="adults-count">Взрослые:</label>
 						<button type="button" name="minus-adult">
@@ -146,18 +150,20 @@
 						</button>
 						<input type="text" id="adults-count">
 						<button type="button" name="plus-adult">
-							<span class="plus-minus"></span>
+							<span class="icon-plus"></span>
 						</button>	
-						<label for="children-count">Дети:</label>
+						
+						<label for="children-count">Дети:</label>	
 						<button type="button" name="minus-children">
 							<span class="icon-minus"></span>
 						</button>
 						<input type="text" id="children-count">
 						<button type="button" name="plus-children">
-							<span class="plus-minus"></span>
-						</button>						
+							<span class="icon-plus"></span>
+						</button>	
+
 					</div>
-					<button type="submit">Найти</button>
+					<button class="btn" type="submit">Найти</button>
 				</form>
 				<img src="img/map.jpg" alt="sedona-map" width="1200" height="593">
 			</div>	
@@ -173,12 +179,13 @@
 					<a class="social-btn social-btn-yt" href="#">Ютуб</a>
 				</div>
 				<div class="footer-copyright">
-					<a href="htmlacademy.ru">
+					<a href="#">
 						Website by
 					</a>
 				</div>
 			</div>
 	</footer>
 	</div>
+	<script src="js/popup-form.js"></script>
 </body>
 </html>

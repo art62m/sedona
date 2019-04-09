@@ -59,6 +59,15 @@ body {
 	text-decoration: none;	
 }
 
+.main-menu-list a:hover {
+	color: #81b3d2;
+}
+
+.main-menu-list a:active {
+	color: #000000;
+	opacity: 0.3;
+}
+
 .main-menu-list li:nth-child(1) {	
 	margin-right: 112px;
 }
@@ -85,7 +94,7 @@ body {
 	position: absolute;
 	top: -56px;
 	z-index: -1;
-	background: url("img/intro-image.jpg") no-repeat;
+	background: url("../img/intro-image.jpg") no-repeat;
 	width: 1200px;
 	height: 773px;
 }
@@ -161,15 +170,15 @@ body {
 	content: "";
 	width: 75px;
 	height: 75px;
-	background: transparent url("img/house-icon.png") no-repeat;
+	background: transparent url("../img/house-icon.png") no-repeat;
 }
 
 .feauters-item:nth-child(2) .feauters-item-title::before {
-	background: transparent url("img/burger-icon.png") no-repeat;
+	background: transparent url("../img/burger-icon.png") no-repeat;
 }
 
 .feauters-item:nth-child(3) .feauters-item-title::before {
-	background: transparent url("img/box-icon.png") no-repeat;
+	background: transparent url("../img/box-icon.png") no-repeat;
 }
 
 .feauters-item-text {
@@ -288,21 +297,144 @@ body {
 
 .main-form {
 	position: absolute;
+	display: none;
 	top: 0;
 	left: 50%;
 	margin-left: -285px;
 	width: 460px;
 	padding: 55px 55px;
 	background-color: #ffffff;
+	font-size: 0;
+}
+
+.main-form-active {
+	display: block;
 }
 
 .main-form label {
+	display: inline-block;
+	position: relative;
+	vertical-align: top;
+	font-size: 14px;
+	line-height: 38px;
 	font-weight: bold;
+	color: #000000;
+	width: 100%;
+	margin-bottom: 29px;
 }
 
 .main-form input[type="text"] {
+	float: right;
+	position: relative;
+	box-sizing: border-box;			
+	padding: 8px 13px;
+	padding-right: 38px;
+	width: 346px;
+	height: 38px;
+	border: 0;
+	font-family: 'PT Sans', "Arial", sans-serif;
+	background-color: #f2f2f2;
+}
+
+.main-form .calendar {
+	position: absolute;
+	display: block;
+	width: 21px;
+	height: 22px;
+	right: 9px;
+	top: 8px;
+	background: transparent url("../img/calendar-icon.png") no-repeat 50% 50%; 
+	opacity: 0.3;
+}
+
+.main-form .calendar:hover {
+	opacity: 1;
+}
+
+.count label {
+	margin-bottom: 0;
+	display: inline-block;
+	margin-right: 43px;
+	width: 71px;
+}
+
+.count label:last-of-type {
+	display: inline-block;
+	width: 38px;
+	margin-right: 27px;
+	margin-left: 53px;
+}
+
+.count input[type="text"] {
+	float: none;
+	display: inline-block;
+	vertical-align: top;
+	padding: 8px 10px;
+	width: 38px;
+	height: 38px;
+}
+
+.count button {
+	display: inline-block;
+	position: relative;
+	padding: 0;
+	width: 38px;
+	height: 38px;
 	border: 0;
 	background-color: #f2f2f2;
+}
+
+.count .icon-minus::before {
+	content: "";
+	width: 38px;
+	height: 38px;
+	left: 0;
+	top: 0;
+	position: absolute;
+	background: transparent url("../img/minus.png") no-repeat 50% 50%; 
+	opacity: 0.5;
+}
+
+.count .icon-plus::before {
+	content: "";
+	width: 38px;
+	height: 38px;
+	left: 0;
+	top: 0;
+	position: absolute;
+	background: transparent url("../img/plus.png") no-repeat 50% 50%; 
+	opacity: 0.5;
+}
+
+.count .icon-minus:hover::before,
+.count .icon-plus:hover::before {
+	opacity: 1;
+	cursor: pointer;
+}
+
+.main-form .btn {
+	width: 100%;
+	height: 58px;
+	padding: 0;
+	margin-top: 54px;
+	text-transform: uppercase;
+	font-family: 'PT Sans', "Arial", sans-serif;
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 600;
+	color: #ffffff;
+	background-color: #81b3d2;
+	border: 0;
+	cursor: pointer;
+}
+
+.main-form .btn:hover {
+	background-color: #669ec0;
+}
+
+.main-form .btn:active {
+	background-color: #5496bd;
+	color: #88b6d1;
 }
 
 .footer {
@@ -344,16 +476,24 @@ body {
 	background-color: #81b3d2;
 }
 
+.social-btn:hover {
+	background-color: #669ec0;
+}
+
+.social-btn:active {
+	background-color: #5496bd;
+}
+
 .social-btn-tw {
-	background: #81b3d2 url("img/tw.png") no-repeat 50% 50%;
+	background: #81b3d2 url("../img/tw.png") no-repeat 50% 50%;
 }
 
 .social-btn-fb {
-	background: #81b3d2 url("img/fb.png") no-repeat 50% 50%;
+	background: #81b3d2 url("../img/fb.png") no-repeat 50% 50%;
 }
 
 .social-btn-yt {
-	background: #81b3d2 url("img/yt.png") no-repeat 50% 50%;
+	background: #81b3d2 url("../img/yt.png") no-repeat 50% 50%;
 }
 
 .footer-copyright {
@@ -378,12 +518,21 @@ body {
 }
 
 
-.footer-copyright a:after {
+.footer-copyright a::after {
 	content: "";
 	position: absolute;
 	right: 0;
 	top: 0;
 	width: 113px;
 	height: 39px;
-	background: transparent url("img/htmlacademy.png") no-repeat;
+	background: transparent url("../img/htmlacademy.png") no-repeat;
+}
+
+.footer-copyright a:hover::after {
+	background-image: url("../img/htmlacademyHover.png");
+}
+
+.footer-copyright a:active::after {
+	background: transparent url("../img/htmlacademy.png") no-repeat;
+	opacity: 0.3;
 }
