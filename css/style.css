@@ -9,6 +9,24 @@ body {
 	text-transform: uppercase;
 }
 
+html {
+ box-sizing: border-box;
+}
+
+
+*, *::before, *::after {
+box-sizing: inherit;
+}
+
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 .container {
 	position: relative;
 	width: 1200px;
@@ -23,7 +41,8 @@ body {
 }
 
 .main-header {
-	position: relative;		
+	position: absolute;	
+	z-index: 1000;	
 }
 
 .header-logo {
@@ -31,7 +50,7 @@ body {
 	left: 50%;
 	margin-left: -69px;
 	top: 0;
-	z-index: 1000;
+	
 }
 
 .main-menu-list {
@@ -437,11 +456,188 @@ body {
 	color: #88b6d1;
 }
 
+.shop-parameters-form {
+	padding: 0 72px;
+	width: 100%;
+	padding-top: 83px;
+	padding-bottom: 9px;
+	color: #ffffff;
+	background: #687d8d url("../img/formbackground.jpg") no-repeat;
+}
+
+.shop-parameters-form ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.shop-parameters-form li {
+	margin-bottom: 20px;
+	
+}
+
+.shop-parameters-form ul label {
+	position: relative;	
+	padding-left: 40px;
+	cursor: pointer;
+}
+
+.shop-parameters-form ul label::before {
+	content: "";
+	position: absolute;
+	width: 25px;
+	height: 22px;
+
+	left: 0;
+	background: transparent url("../img/checkbox.png") no-repeat;
+}
+
+.shop-parameters-form ul input[type="checkbox"]:checked + label::before {
+	background: transparent url("../img/checkboxactive.png") no-repeat;
+}
+
+.shop-parameters-form fieldset {
+	margin: 0;
+	padding: 0;
+	padding-right: 25px;
+	float: left;
+	width: 255px;
+	border: 0;
+}
+
+.shop-parameters-form legend {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 22px;
+	text-transform: uppercase;
+	font-size: 16px;
+	line-height: 21px;
+	font-weight: bold;
+}
+
+.shop-parameters-form .form-range {
+	padding: 0;
+	width: 328px;	
+	float: right;
+	margin-bottom: 32px;
+}
+
+.range-parameters {
+	margin-left: 10px;
+	height: 36px;
+	border: 2px solid #ffffff;
+	border-radius: 3px;
+	margin-bottom: 20px;
+	font-size: 0;
+}
+
+.range-parameters label {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	width: 157px;
+	font-size: 14px;
+	line-height: 34px;
+	padding-left: 65px;
+	cursor: pointer;
+}
+
+
+.form-range legend {
+	margin-bottom: 10px;
+}
+
+.form-range .max-price::before {
+	content: "";
+	position: absolute;
+	height: 22px;
+	width: 2px;
+	left: 0;
+	top: 5px;
+	background-color: #ffffff;
+}
+
+.form-range input{
+	padding: 0;
+	width: 50px;
+	background: transparent;
+	font: inherit;
+	line-height: 21px;
+	text-transform: uppercase;
+	color: white;
+	border: 0;
+	outline: none;
+}
+
+.range-controls {
+	position: relative;
+	margin-left: 10px;
+
+}
+
+.range-controls .scale{	
+	height: 2px;
+	background: rgba(255,255,255,0.3)
+}
+
+.range-controls .bar{
+	height: 2px;
+	background: rgba(255,255,255,1)
+}
+
+.range-controls .toggle {
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	top: -9px;
+	background: #ababab;
+	border: 8px solid #ffffff;
+	border-radius: 50%;
+	box-shadow: 0 2px 1px 0 rgba(0,1,1,0.2);
+	cursor: pointer;
+}
+
+.range-controls .toggle:hover {
+	background: #1c4f80;
+}
+
+.range-controls .toggle-min {
+	left: 0px;
+}
+
+.range-controls .toggle-max {
+	left: 80%;
+}
+
+.form-button {
+	float: right;
+	width: 137px;
+	height: 36px;
+	margin-right: 96px;
+	font: inherit;
+	line-height: 33px;
+	text-align: center;
+	text-decoration: none;
+	color: #ffffff;
+	border: 2px solid #ffffff;
+	border-radius: 2px;
+}
+
+.form-button:hover {
+	color: #000000;
+	background: #ffffff;
+}
+
 .footer {
 	position: absolute;
 	bottom: 0;
 	background-color: rgba(255,255,255,0.9);
 	padding: 0 72px;
+}
+
+
+.hotels-page .footer {
+	position: static;
 }
 
 .tag-item {
